@@ -6,7 +6,7 @@ RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -qq install \
     curl libssl-dev automake autoconf pkg-config libcurl4-openssl-dev libjansson-dev libgmp-dev git make
 
-RUN git clone https://github.com/Optiminer/cpuminer-xzc.git && \
+RUN git clone https://github.com/Optiminer/cpuminer-xzc.git /cpuminer && \
     cd /cpuminer && \
     ./build.sh && \
     mv /cpuminer/cpuminer /usr/local/bin/cpuminer && \
